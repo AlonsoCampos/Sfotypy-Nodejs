@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title><%=artist.name%></title>
+	<meta charset="UTF-8"/>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<nav>
+  		<ul>
+  			<li><a href="/artists">Artistas</a></li>
+  			<li><a href="/artists/add">Registrar nuevo Artista</a></li>
+  		</ul>
+  	</nav>
+	<h1><%=artist.name%></h1>
+	<h1><%=artist.slug%></h1>
+	<h2>Albums</h2>
+	<ul>
+		<%artist.albums.forEach(function(album){%>
+			<li><%album.year%> - <%album.title%> </li>
+			<li><img src="/images/<%album.image%>"> </li>
+		<% });%>
+	</ul>
+	<h2>Shows</h2>
+	<ul>
+		<%artist.shows.forEach(function(shows){%>
+			<li><%shows.city%></li>
+		<% });%>
+	</ul>
+
+
+</body>
+</html>

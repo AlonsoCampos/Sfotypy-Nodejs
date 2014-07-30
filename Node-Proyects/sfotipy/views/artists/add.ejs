@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Add</title>
+	<meta charset="UTF-8"/>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<nav>
+  		<ul>
+  			<li><a href="/artists">Artistas</a></li>
+  			<li><a href="/artists/add">Registrar nuevo Artista</a></li>
+  		</ul>
+  	</nav>
+	<form action="/artists" method="post">
+		<input type="text" name="name">
+		<input type="text" name="slug">
+		<input type="text" name="title">
+		<input type="text" name="year">
+		<input type="submit">
+	</form>
+</body>
+</html>

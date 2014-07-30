@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Lista de Artistas</title>
+	<meta charset="UTF-8"/>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<h1>Artist</h1>
+	<nav>
+  		<ul>
+  			<li><a href="/artists">Artistas</a></li>
+  			<li><a href="/artists/add">Registrar nuevo Artista</a></li>
+  		</ul>
+  	</nav>
+	<ul>
+		<!--
+		Linea 15		  <- Indican condicion
+		Linea 16 <- Indican imprimir en pantalla
+		
+		 -->
+		<% artists.forEach(function(artist){ %>
+			<li><a href="/artists/<%= artist._id%>"><%= artist.name%></a></li>
+		<%})%>
+	</ul>
+</body>
+</html>
