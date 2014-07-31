@@ -1,5 +1,6 @@
-var db = require('../conection');
-var Schema = db.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+mongoose.connect('alonso:123@kahana.mongohq.com:10099/backendpro')
 
 var artistSchema = new Schema({
 	name:String,
@@ -14,6 +15,6 @@ var artistSchema = new Schema({
 	}]
 });
 
-var Artist = db.model('Artist', artistSchema);
+var Artist = mongoose.model('Artist', artistSchema);
 
 module.exports = Artist;
