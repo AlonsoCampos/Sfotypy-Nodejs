@@ -21,7 +21,11 @@
 		
 		 -->
 		<% artists.forEach(function(artist){ %>
-			<li><a href="/artists/<%= artist._id%>"><%= artist.name%></a></li>
+			<li>
+				<a href="/artists/<%= artist._id%>"><%= artist.name%></a>
+				<a href="/artists/<%= artist._id%>">Editar</a>
+				<a href="/artists/<%= artist._id%>">Borrar</a>
+			</li>
 		<%})%>
 	</ul>
 </body>

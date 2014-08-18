@@ -49,7 +49,18 @@ router.get('/:album_id',function(req,res){
 	});
 });
 
-router.put('/albums/:album_id', function(req,res){
+
+router.get('/edit/:album_id',function(req,res){
+	Albums.findById(req.params.album_id, function(err,album){
+		res.render('albums/edit',{album:album});
+		console.log(album);
+	});
+
+});
+
+
+
+router.put('/albums/edit/:album_id', function(req,res){
 	Albums.findById(req.params.bear_id, function(err, album) {
 		if (err){
 			res.send(err);
@@ -68,7 +79,6 @@ router.put('/albums/:album_id', function(req,res){
 	});
 });
 
-/*
 
 router.delete('/albums/:album_id', function(req,res){
 	Albums.remove({
@@ -81,5 +91,4 @@ router.delete('/albums/:album_id', function(req,res){
 		});
 });
 
-*/
 module.exports = router;

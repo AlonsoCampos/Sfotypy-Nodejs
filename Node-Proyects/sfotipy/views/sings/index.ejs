@@ -21,7 +21,11 @@
 		
 		 -->
 		<% sings.forEach(function(sing){ %>
-			<li><a href="/sings/<%= sing._id%>"><%= sing.title%></a></li>
+			<li>
+				<a href="/sings/<%= sing._id%>"><%= sing.title%></a>
+				<a href="/sings/<%= sing._id%>">Editar</a>
+				<a href="/sings/<%= sing._id%>">Borrar</a>
+			</li>
 		<%})%>
 	</ul>
 </body>

@@ -21,7 +21,11 @@
 		
 		 -->
 		<% albums.forEach(function(album){ %>
-			<li><a href="/albums/<%= album._id%>"><%= album.titulo%></a></li>
+			<li>
+				<a href="/albums/<%= album._id%>"><%= album.titulo%></a>
+				<a href="/albums/edit/<%= album._id%>">Editar</a>
+				<a href="/albums/<%= album._id%>">Borrar</a>
+			</li>
 		<%})%>
 	</ul>
 </body>

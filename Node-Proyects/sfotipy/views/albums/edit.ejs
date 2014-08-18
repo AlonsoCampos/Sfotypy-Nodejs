@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Add</title>
+	<meta charset="UTF-8"/>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<nav>
+  		<ul>
+  			<li><a href="/">Inicio</a></li>
+  			<li><a href="/albums">Albums</a></li>
+  			<li><a href="/albums/add">Registrar Album</a></li>
+  		</ul>
+  	</nav>
+	<form action="/albums/edit/<%= album._id%>" method="post">
+		<input type="text" name="titulo" value="<%= album.titulo%>">
+		<input type="text" name="genero">
+		<input type="text" name="productor">
+		
+		<input type="submit">
+	</form>
+</body>
+</html>
+
+
+<!--http://codehero.co/node-y-express-aplicacion-con-mongodb-parte-ii/
